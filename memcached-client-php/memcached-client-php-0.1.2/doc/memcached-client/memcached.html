@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class memcached</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class memcached
+</h2> (line <span class="linenumber">96</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_memcached-client_php.html">/memcached-client.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>memcached client class implemented using (p)fsockopen()</h5>
+<ul>
+		<li><strong>author:</strong> - Ryan T. Dean &lt;<a href="mailto:rtdean@cytherianage.net">mailto:rtdean@cytherianage.net</a>&gt;</li>
+	</ul>
+<br /><hr />
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">array</span>
+    <a href="#var$stats" title="details" class="property"><strong>$stats</strong></a>
+</div>
+<hr />
+<a name="var$stats" id="var$stats"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$stats</strong> (line <span class="linenumber">107</span>)
+ </h4>
+<h4>Data type : array</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Command statistics</h5>
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methodmemcached" title="details" class="method-name">memcached</a>
+        (<span class="var-type">array</span>&nbsp;<span class="var-name">$args</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodadd" title="details" class="method-name">add</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$val</span>, <span class="var-type">interger</span>&nbsp;<span class="var-name">$exp</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methoddecr" title="details" class="method-name">decr</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">interger</span>&nbsp;<span class="var-name">$amt</span> = <span class="var-default">1</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methoddelete" title="details" class="method-name">delete</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">interger</span>&nbsp;<span class="var-name">$time</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methoddisconnect_all" title="details" class="method-name">disconnect_all</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodenable_compress" title="details" class="method-name">enable_compress</a>
+        (<span class="var-type">boolean</span>&nbsp;<span class="var-name">$enable</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodforget_dead_hosts" title="details" class="method-name">forget_dead_hosts</a>
+        ()
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">mixed</span>
+        <a href="#methodget" title="details" class="method-name">get</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodget_multi" title="details" class="method-name">get_multi</a>
+        (<span class="var-type">array</span>&nbsp;<span class="var-name">$keys</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">interger</span>
+        <a href="#methodincr" title="details" class="method-name">incr</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">interger</span>&nbsp;<span class="var-name">$amt</span> = <span class="var-default">1</span>])
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodreplace" title="details" class="method-name">replace</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">interger</span>&nbsp;<span class="var-name">$exp</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">array</span>
+        <a href="#methodrun_command" title="details" class="method-name">run_command</a>
+        (<span class="var-type">resource</span>&nbsp;<span class="var-name">$sock</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$cmd</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">boolean</span>
+        <a href="#methodset" title="details" class="method-name">set</a>
+        (<span class="var-type">string</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, <span class="var-type">interger</span>&nbsp;<span class="var-name">$exp</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodset_compress_threshold" title="details" class="method-name">set_compress_threshold</a>
+        (<span class="var-type">interger</span>&nbsp;<span class="var-name">$thresh</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodset_debug" title="details" class="method-name">set_debug</a>
+        (<span class="var-type">boolean</span>&nbsp;<span class="var-name">$dbg</span>)
+        </div>
+				
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodset_servers" title="details" class="method-name">set_servers</a>
+        (<span class="var-type">array</span>&nbsp;<span class="var-name">$list</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="methodmemcached" id="methodmemcached"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor memcached</strong> (line <span class="linenumber">222</span>)
+ </h4> 
+<h4><i>mixed</i> <strong>memcached(
+array
+$args)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Memcache initializer</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $args</strong>: Associative array of settings</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodadd" id="methodadd"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method add</strong> (line <span class="linenumber">250</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>add(
+string
+$key, mixed
+$val, [interger
+$exp = 0])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Adds a key/value to the memcache server if one isn't already set with  that key</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: Key to set with data</li>
+			<li><strong>mixed $val</strong>: Value to store</li>
+			<li><strong>interger $exp</strong>: (optional) Time to expire data at</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddecr" id="methoddecr"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method decr</strong> (line <span class="linenumber">267</span>)
+ </h4> 
+<h4><i>mixed</i> <strong>decr(
+string
+$key, [interger
+$amt = 1])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Decriment a value stored on the memcache server</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: Key to decriment</li>
+			<li><strong>interger $amt</strong>: (optional) Amount to decriment</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - FALSE on failure, value on success</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddelete" id="methoddelete"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method delete</strong> (line <span class="linenumber">284</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>delete(
+string
+$key, [interger
+$time = 0])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Deletes a key from the server, optionally after $time</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: Key to delete</li>
+			<li><strong>interger $time</strong>: (optional) How long to wait before deleting</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - TRUE on success, FALSE on failure</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methoddisconnect_all" id="methoddisconnect_all"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method disconnect_all</strong> (line <span class="linenumber">320</span>)
+ </h4> 
+<h4><i>void</i> <strong>disconnect_all(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Disconnects all connected sockets</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodenable_compress" id="methodenable_compress"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method enable_compress</strong> (line <span class="linenumber">338</span>)
+ </h4> 
+<h4><i>void</i> <strong>enable_compress(
+boolean
+$enable)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Enable / Disable compression</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>boolean $enable</strong>: TRUE to enable, FALSE to disable</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodforget_dead_hosts" id="methodforget_dead_hosts"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method forget_dead_hosts</strong> (line <span class="linenumber">351</span>)
+ </h4> 
+<h4><i>void</i> <strong>forget_dead_hosts(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Forget about all of the dead hosts</h5>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget" id="methodget"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get</strong> (line <span class="linenumber">367</span>)
+ </h4> 
+<h4><i>mixed</i> <strong>get(
+string
+$key)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Retrieves the value associated with the key from the memcache server</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: Key to retrieve</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodget_multi" id="methodget_multi"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method get_multi</strong> (line <span class="linenumber">407</span>)
+ </h4> 
+<h4><i>array</i> <strong>get_multi(
+array
+$keys)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Get multiple keys from the server(s)</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $keys</strong>: Keys to retrieve</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodincr" id="methodincr"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method incr</strong> (line <span class="linenumber">471</span>)
+ </h4> 
+<h4><i>interger</i> <strong>incr(
+string
+$key, [interger
+$amt = 1])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Increments $key (optionally) by $amt</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: Key to increment</li>
+			<li><strong>interger $amt</strong>: (optional) amount to increment</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - New key value?</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodreplace" id="methodreplace"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method replace</strong> (line <span class="linenumber">489</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>replace(
+string
+$key, mixed
+$value, [interger
+$exp = 0])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Overwrites an existing value for key; only works if key is already set</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: Key to set value as</li>
+			<li><strong>mixed $value</strong>: Value to store</li>
+			<li><strong>interger $exp</strong>: (optional) Experiation time</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodrun_command" id="methodrun_command"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method run_command</strong> (line <span class="linenumber">513</span>)
+ </h4> 
+<h4><i>array</i> <strong>run_command(
+resource
+$sock, string
+$cmd)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Passes through $cmd to the memcache server connected by $sock; returns  output as an array (null array if no output)</h5>
+<div class="desc"><p>NOTE: due to a possible bug in how PHP reads while using fgets(), each        line may not be terminated by a \r\n.  More specifically, my testing        has shown that, on FreeBSD at least, each line is terminated only        with a \n.  This is with the PHP flag auto_detect_line_endings set        to falase (the default).</p></div>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>resource $sock</strong>: Socket to send command on</li>
+			<li><strong>string $cmd</strong>: Command to run</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - Output array</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodset" id="methodset"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method set</strong> (line <span class="linenumber">547</span>)
+ </h4> 
+<h4><i>boolean</i> <strong>set(
+string
+$key, mixed
+$value, [interger
+$exp = 0])</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Unconditionally sets a key to a given value in the memcache.  Returns true  if set successfully.</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>string $key</strong>: Key to set value as</li>
+			<li><strong>mixed $value</strong>: Value to set</li>
+			<li><strong>interger $exp</strong>: (optional) Experiation time</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>return</strong> - TRUE on success</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodset_compress_threshold" id="methodset_compress_threshold"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method set_compress_threshold</strong> (line <span class="linenumber">562</span>)
+ </h4> 
+<h4><i>void</i> <strong>set_compress_threshold(
+interger
+$thresh)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the compression threshold</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>interger $thresh</strong>: Threshold to compress if larger than</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodset_debug" id="methodset_debug"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method set_debug</strong> (line <span class="linenumber">579</span>)
+ </h4> 
+<h4><i>void</i> <strong>set_debug(
+boolean
+$dbg)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the debug flag</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>boolean $dbg</strong>: TRUE for debugging, FALSE otherwise</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>see</strong> - memcahced::memcached</li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodset_servers" id="methodset_servers"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method set_servers</strong> (line <span class="linenumber">596</span>)
+ </h4> 
+<h4><i>void</i> <strong>set_servers(
+array
+$list)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+<h5>Sets the server list to distribute key gets and puts between</h5>
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $list</strong>: Array of servers to connect to</li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>see</strong> - <a href="../memcached-client/memcached.html#methodmemcached">memcached::memcached()</a></li>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Wed,  8 Oct 2003 14:26:57 -0400 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.2</a>
+	</div>
+</body>
+</html>

@@ -32,6 +32,8 @@ extension=php_memcache.dll
 
 然后重启服务，查看`phpinfo()`，`Ctrl + F`搜索`memcache`。
 
+![memcache](https://raw.githubusercontent.com/GHBJayce/php_memcache_windows/master/assets/memcache.jpg)
+
 
 ## 步骤二 启动服务
 
